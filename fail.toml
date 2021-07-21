@@ -1,3 +1,0 @@
-# This should cause parsing to fail and a notification to be sent
-[please]
-  fail =
