@@ -30,3 +30,11 @@ variable "ssh_key" {
   type = string
   description = "The DigitalOcean SSH key to add to the server"
 }
+
+/*
+  Server configuration
+*/
+variable "digitalocean_region" {
+  type = string
+  description = "Where the resources should be deployed"
+}
