@@ -12,3 +12,7 @@ data "digitalocean_project" "project" {
 data "digitalocean_ssh_key" "root" {
   name = var.ssh_key
 }
+
+data "local_file" "dns_records" {
+  filename = "${path.module}/records.yml"
+}
