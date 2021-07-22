@@ -19,16 +19,19 @@ variable "cloudflare_token" {
 variable "domain" {
   type        = string
   description = "The domain to modify DNS records on, must be active on Cloudflare"
+  default     = "wafflehacks.tech"
 }
 
 variable "project" {
   type        = string
   description = "The DigitalOcean project to add resources to"
+  default     = "WaffleHacks"
 }
 
 variable "ssh_key" {
   type        = string
   description = "The DigitalOcean SSH key to add to the server"
+  default     = "root@wafflehacks.tech"
 }
 
 /*
@@ -39,4 +42,7 @@ variable "regions" {
     digitalocean = string
   })
   description = "Where the resources should be deployed per cloud provider"
+  default = {
+    digitalocean = "sfo2"
+  }
 }
