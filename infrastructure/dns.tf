@@ -1,7 +1,4 @@
 locals {
-  // Get the first valid zone
-  zone_id = coalesce(data.cloudflare_zones.domain).id
-
   // Get all the v4 and v6 addresses of the servers that should be routable
   routable_servers = [digitalocean_droplet.primary]
   ipv4             = { for server in local.routable_servers : server.name => server.ipv4_address }
@@ -24,7 +21,7 @@ locals {
 resource "cloudflare_record" "record" {
   count = length(local.records)
 
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.domain.zones[0].id
 
   type  = element(local.records, count.index)["type"]
   name  = element(local.records, count.index)["name"]
