@@ -1,6 +1,18 @@
 /*
   Providers
 */
+variable "aws_access_key" {
+  type        = string
+  description = "The AWS access key ID to authenticate with"
+  sensitive   = true
+}
+
+variable "aws_secret_key" {
+  type        = string
+  description = "The AWS secret access key to authenticate with"
+  sensitive   = true
+}
+
 variable "digitalocean_token" {
   type        = string
   description = "The token used to authenticate with the DigitalOcean API"
@@ -39,10 +51,12 @@ variable "ssh_key" {
 */
 variable "regions" {
   type = object({
+    aws          = string
     digitalocean = string
   })
   description = "Where the resources should be deployed per cloud provider"
   default = {
+    aws          = "us-west-1"
     digitalocean = "sfo2"
   }
 }
