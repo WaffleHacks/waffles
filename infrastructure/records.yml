@@ -6,4 +6,8 @@
 #
 
 waffle-primary:
+  # Infrastructure services
+  - vault.wafflehacks.tech
+
+  # Deployed services
   - cms.wafflehacks.tech
