@@ -34,7 +34,9 @@ variable "ssh_key" {
 /*
   Server configuration
 */
-variable "digitalocean_region" {
-  type        = string
-  description = "Where the resources should be deployed"
+variable "regions" {
+  type = object({
+    digitalocean = string
+  })
+  description = "Where the resources should be deployed per cloud provider"
 }

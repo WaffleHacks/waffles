@@ -1,6 +1,6 @@
 resource "digitalocean_vpc" "network" {
   name     = "waffle-network"
-  region   = var.digitalocean_region
+  region   = var.regions.digitalocean
   ip_range = "10.93.35.0/24"
 }
 
@@ -9,7 +9,7 @@ resource "digitalocean_droplet" "primary" {
 
   image  = "debian-10-x64"
   size   = "s-2vcpu-4gb"
-  region = var.digitalocean_region
+  region = var.regions.digitalocean
 
   ssh_keys = [data.digitalocean_ssh_key.root.id]
 
