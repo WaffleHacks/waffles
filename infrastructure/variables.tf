@@ -2,32 +2,32 @@
   Providers
 */
 variable "digitalocean_token" {
-  type = string
+  type        = string
   description = "The token used to authenticate with the DigitalOcean API"
-  sensitive = true
+  sensitive   = true
 }
 
 variable "cloudflare_token" {
-  type = string
+  type        = string
   description = "The token used to authenticate with the Cloudflare API"
-  sensitive = true
+  sensitive   = true
 }
 
 /*
   Existing resources
 */
 variable "domain" {
-  type = string
+  type        = string
   description = "The domain to modify DNS records on, must be active on Cloudflare"
 }
 
 variable "project" {
-  type = string
+  type        = string
   description = "The DigitalOcean project to add resources to"
 }
 
 variable "ssh_key" {
-  type = string
+  type        = string
   description = "The DigitalOcean SSH key to add to the server"
 }
 
@@ -35,6 +35,6 @@ variable "ssh_key" {
   Server configuration
 */
 variable "digitalocean_region" {
-  type = string
+  type        = string
   description = "Where the resources should be deployed"
 }
