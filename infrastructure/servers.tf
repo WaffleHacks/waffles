@@ -36,14 +36,14 @@ resource "digitalocean_firewall" "primary" {
   // TCP - Allow traffic to anywhere
   outbound_rule {
     protocol              = "tcp"
-    port_range            = "1-65536"
+    port_range            = "1-65535"
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 
   // UDP - Allow traffic to anywhere
   outbound_rule {
     protocol              = "udp"
-    port_range            = "1-65536"
+    port_range            = "1-65535"
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 }
