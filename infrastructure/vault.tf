@@ -16,18 +16,18 @@ resource "aws_iam_policy" "vault" {
       {
         Effect = "Allow"
         Action = [
-          "iam:DeleteAccessKey",
-          "iam:AttachUserPolicy",
-          "iam:DeleteUserPolicy",
-          "iam:DeleteUser",
-          "iam:ListUserPolicies",
-          "iam:CreateUser",
-          "iam:CreateAccessKey",
-          "iam:RemoveUserFromGroup",
           "iam:AddUserToGroup",
-          "iam:ListGroupsForUser",
+          "iam:AttachUserPolicy",
+          "iam:CreateAccessKey",
+          "iam:CreateUser",
+          "iam:DeleteAccessKey",
+          "iam:DeleteUser",
+          "iam:DeleteUserPolicy",
           "iam:DetachUserPolicy",
-          "iam:ListAccessKeys"
+          "iam:ListAccessKeys",
+          "iam:ListGroupsForUser",
+          "iam:ListUserPolicies",
+          "iam:RemoveUserFromGroup"
         ]
         Resource = [
           "arn:aws:iam::${data.aws_caller_identity.current.account_id}:group/*",
@@ -37,9 +37,9 @@ resource "aws_iam_policy" "vault" {
       {
         Effect = "Allow"
         Action = [
+          "iam:CreateAccessKey",
           "iam:DeleteAccessKey",
-          "iam:GetUser",
-          "iam:CreateAccessKey"
+          "iam:GetUser"
         ]
         Resource = [
           "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/wafflehacks/vault/$${aws:username}"
