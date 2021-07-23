@@ -27,6 +27,7 @@ resource "aws_iam_policy" "vault" {
           "iam:ListAccessKeys",
           "iam:ListGroupsForUser",
           "iam:ListUserPolicies",
+          "iam:PutUserPolicy",
           "iam:RemoveUserFromGroup"
         ]
         Resource = [
