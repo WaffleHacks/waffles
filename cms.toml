@@ -1,0 +1,43 @@
+[docker]
+  image = "wafflehacks/cms"
+  tag = "master"
+
+[dependencies]
+  redis = "CACHE_REDIS"
+  postgres = "DB_CONNECTION_STRING"
+
+[environment]
+  public_url = "https://cms.wafflehacks.tech"
+
+  db_client = "pg"
+
+  cache_enabled = "true"
+  cache_store = "redis"
+
+  admin_email = "admin@wafflehacks.tech"
+  email_from = "cms@wafflehacks.tech"
+  email_transport = "mailgun"
+
+  storage_locations = "s3"
+  storage_s3_driver = "s3"
+
+  oauth_providers = "discord"
+  oauth_discord_scope = "identify email guilds"
+
+[secrets]
+  key = { type = "generate", format = "base64", length = 32 }
+  secret = { type = "generate", format = "base64", length = 32 }
+
+  admin_password = "load"
+
+  email_mailgun_api_key = "load"
+  email_mailgun_domain = "load"
+
+  storage_s3_key = { type = "aws", role = "cms", part = "access" }
+  storage_s3_secret = { type = "aws", role = "cms", part = "secret" }
+  storage_s3_bucket = "load"
+  storage_s3_region = "load"
+
+  oauth_discord_key = "load"
+  oauth_discord_secret = "load"
+  discord_guild_id = "load"
