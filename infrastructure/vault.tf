@@ -2,11 +2,12 @@
     AWS accounts and groups for Hashicorp Vault
 */
 resource "aws_iam_group" "vault" {
-  name = "wafflehacks-vault"
+  name = "vault"
+  path = "/wafflehacks/"
 }
 
 resource "aws_iam_policy" "vault" {
-  name        = "WaffleHacksVault"
+  name        = "wafflehacks-vault"
   description = "Gives necessary permissions for HashiCorp Vault to manage AWS users"
 
   policy = jsonencode({
@@ -54,7 +55,8 @@ resource "aws_iam_group_policy_attachment" "vault-attachment" {
 }
 
 resource "aws_iam_user" "vault" {
-  name = "whvault-prod"
+  name = "primary"
+  path = "/wafflehacks/vault/"
 }
 
 resource "aws_iam_user_group_membership" "vault-group" {
