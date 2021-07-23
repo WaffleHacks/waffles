@@ -42,7 +42,7 @@ resource "aws_iam_policy" "vault" {
           "iam:CreateAccessKey"
         ]
         Resource = [
-          "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/$${aws:username}"
+          "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/wafflehacks/vault/$${aws:username}"
         ]
       }
     ]

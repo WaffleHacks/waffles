@@ -6,6 +6,6 @@ output "aws_vault_credentials" {
     access_key = aws_iam_access_key.vault.id,
     secret_key = aws_iam_access_key.vault.secret
   }
-  sensitive = true
+  sensitive   = true
   description = "The credentials to use for the Vault instance"
 }
