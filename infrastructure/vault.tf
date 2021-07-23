@@ -59,6 +59,10 @@ resource "aws_iam_user" "vault" {
   path = "/wafflehacks/vault/"
 }
 
+resource "aws_iam_access_key" "vault" {
+  user = aws_iam_user.vault.name
+}
+
 resource "aws_iam_user_group_membership" "vault-group" {
   user = aws_iam_user.vault.name
 
