@@ -25,6 +25,7 @@ resource "aws_iam_policy" "vault" {
           "iam:DeleteUserPolicy",
           "iam:DetachUserPolicy",
           "iam:ListAccessKeys",
+          "iam:ListAttachedUserPolicies",
           "iam:ListGroupsForUser",
           "iam:ListUserPolicies",
           "iam:PutUserPolicy",
