@@ -13,7 +13,7 @@
   debug = "no"
 
 [secrets]
-  key = { type = "generate", format = "base64", length = 32 }
+  secret_key = { type = "generate", format = "base64", length = 32 }
 
   mailgun_api_key = "load"
   mailgun_domain = "load"
