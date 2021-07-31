@@ -14,4 +14,4 @@ waffle-primary:
   - cms.wafflehacks.tech
 
   # Migrating services
-  - mail-v2.wafflehacks.tech
+  - mail.wafflehacks.tech

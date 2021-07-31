@@ -9,7 +9,7 @@
 [environment]
   debug = "no"
   https = "yes"
-  public_url = "https://mail-v2.wafflehacks.tech"
+  public_url = "https://mail.wafflehacks.tech"
 
 [secrets]
   secret_key = { type = "generate", format = "base64", length = 32 }

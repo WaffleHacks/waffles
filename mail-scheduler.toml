@@ -18,7 +18,6 @@
   mailgun_api_key = "load"
   mailgun_domain = "load"
   mailgun_webhook_signing_key = "load"
-  webhook_secret = "load"
 
   aws_access_key_id = { type = "aws", role = "mail", part = "access" }
   aws_secret_access_key = { type = "aws", role = "mail", part = "secret" }
