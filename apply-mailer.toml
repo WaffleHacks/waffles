@@ -1,0 +1,26 @@
+[docker]
+  image = "wafflehacks/hackathon-manager"
+  tag = "sidekiq-develop"
+
+[web]
+  enabled = false
+
+[dependencies]
+  redis = true
+  postgres = { name = "DATABASE_URL", role = "apply" }
+
+[environment]
+  lang = "en_US.UTF-8"
+  time_zone = "America/Los_Angeles"
+
+  smtp_authentication = "plain"
+  smtp_starttls_auto = "true"
+
+[secrets]
+  devise_secret_key = { type = "generate", format = "hex", length = 64 }
+  secret_key_base = { type = "generate", format = "hex", length = 64 }
+
+  smtp_address = "load"
+  smtp_password = "load"
+  smtp_port = "load"
+  smtp_user_name = "load"
