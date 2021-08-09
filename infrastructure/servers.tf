@@ -51,6 +51,6 @@ resource "digitalocean_firewall" "primary" {
 resource "digitalocean_project_resources" "project" {
   project = data.digitalocean_project.project.id
   resources = [
-    digitalocean_droplet.primary.id
+    digitalocean_droplet.primary.urn
   ]
 }
