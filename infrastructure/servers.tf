@@ -47,3 +47,10 @@ resource "digitalocean_firewall" "primary" {
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 }
+
+resource "digitalocean_project_resources" "project" {
+  project = data.digitalocean_project.project.id
+  resources = [
+    digitalocean_droplet.primary.id
+  ]
+}
