@@ -10,6 +10,9 @@
   postgres = { name = "DATABASE_URL", role = "apply" }
 
 [environment]
+  hm_domain_name = "apply.wafflehacks.tech"
+  hm_protocol = "https"
+
   lang = "en_US.UTF-8"
   time_zone = "America/Los_Angeles"
 
