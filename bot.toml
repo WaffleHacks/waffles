@@ -1,0 +1,23 @@
+[docker]
+  image = "wafflehacks/wafflebot"
+  tag = "web-master"
+
+[dependencies]
+  redis = true
+  postgres = { name = "DATABASE_URL", role = "wafflebot" }
+
+[environment]
+  mode = "api"
+  full_errors = "no"
+
+  event_start = "2021-08-27T00:00:00-05:00"
+  event_end = "2021-08-29T00:00:00-05:00"
+
+[secrets]
+  discord_token = "load"
+
+  api_secret_key = { type = "generate", length = 64, format = "base64" }
+
+  api_discord_client_id = "load"
+  api_discord_client_secret = "load"
+  api_guild_id = "load"

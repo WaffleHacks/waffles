@@ -1,0 +1,30 @@
+[docker]
+  image = "wafflehacks/wafflebot"
+  tag = "bot-master"
+
+[web]
+  enabled = false
+
+[dependencies]
+  redis = true
+  postgres = { name = "DATABASE_URL", role = "wafflebot" }
+
+[environment]
+  mode = "bot"
+  full_errors = "no"
+
+  event_start = "2021-08-27T00:00:00-05:00"
+  event_end = "2021-08-29T00:00:00-05:00"
+
+  bot_disabled_extensions = "verification"
+
+  bot_hm_url = "https://apply.wafflehacks.tech"
+
+[secrets]
+  discord_token = "load"
+
+  bot_hm_client_id = "load"
+  bot_hm_client_secret = "load"
+
+  bot_teamup_api_key = "load"
+  bot_teamup_calendar = "load"

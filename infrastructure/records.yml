@@ -12,5 +12,6 @@ waffle-primary:
 
   # Deployed services
   - apply.wafflehacks.tech
+  - bot.wafflehacks.tech
   - cms.wafflehacks.tech
   - mail.wafflehacks.tech
