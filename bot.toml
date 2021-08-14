@@ -15,9 +15,9 @@
 
 [secrets]
   discord_token = "load"
+  discord_guild_id = "load"
 
   api_secret_key = { type = "generate", length = 64, format = "base64" }
 
   api_discord_client_id = "load"
   api_discord_client_secret = "load"
-  api_guild_id = "load"
