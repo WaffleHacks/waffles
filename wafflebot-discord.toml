@@ -16,7 +16,7 @@
   event_start = "2021-08-27T00:00:00-05:00"
   event_end = "2021-08-29T00:00:00-05:00"
 
-  bot_disabled_extensions = "verification"
+  bot_disabled_extensions = ""
 
   bot_hm_url = "https://apply.wafflehacks.tech"
 
