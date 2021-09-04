@@ -17,6 +17,8 @@
   discord_token = "load"
   discord_guild_id = "load"
 
+  sentry_dsn = "load"
+
   api_secret_key = { type = "generate", length = 64, format = "base64" }
 
   api_discord_client_id = "load"

@@ -24,6 +24,8 @@
   discord_token = "load"
   discord_guild_id = "load"
 
+  sentry_dsn = "load"
+
   bot_hm_client_id = "load"
   bot_hm_client_secret = "load"
 

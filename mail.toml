@@ -19,6 +19,8 @@
   mailgun_webhook_signing_key = "load"
   webhook_secret = "load"
 
+  sentry_dsn = "load"
+
   aws_access_key_id = { type = "aws", role = "mail", part = "access" }
   aws_secret_access_key = { type = "aws", role = "mail", part = "secret" }
   aws_storage_bucket_name = "load"
