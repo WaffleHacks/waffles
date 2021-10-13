@@ -35,11 +35,11 @@ resource "cloudflare_record" "record" {
 resource "cloudflare_record" "instatus_page" {
   zone_id = data.cloudflare_zones.domain.zones[0].id
 
-  type = "CNAME"
-  name = "status.${var.domain}"
+  type  = "CNAME"
+  name  = "status.${var.domain}"
   value = "cname.instatus.com"
 
-  ttl = 1
+  ttl     = 1
   proxied = true
 }
 

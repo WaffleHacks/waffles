@@ -4,7 +4,7 @@
 
 resource "aws_s3_bucket" "cms" {
   bucket = "wafflehacks-cms"
-  acl = "private"
+  acl    = "private"
 
   tags = {
     service = "cms"
