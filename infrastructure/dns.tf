@@ -43,6 +43,17 @@ resource "cloudflare_record" "instatus_page" {
   proxied = true
 }
 
+resource "cloudflare_record" "mailgun_tracking" {
+  zone_id = data.cloudflare_zones.domain.zones[0].id
+
+  type  = "CNAME"
+  name  = "email.${var.domain}"
+  value = "mailgun.org"
+
+  ttl     = 1
+  proxied = true
+}
+
 // Define page rules
 resource "cloudflare_page_rule" "mailgun_tracking" {
   zone_id = data.cloudflare_zones.domain.zones[0].id
