@@ -14,3 +14,6 @@ waffle-primary:
   - apply.wafflehacks.tech
   - bot.wafflehacks.tech
   - cms.wafflehacks.tech
+
+  # Third-party services
+  - status.wafflehacks.tech

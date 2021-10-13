@@ -52,3 +52,12 @@ resource "cloudflare_page_rule" "homepage_forwarding" {
     }
   }
 }
+
+resource "cloudflare_page_rule" "instatus_page" {
+  zone_id = data.cloudflare_zones.domain.zones[0].id
+  target = "status.${var.domain}/*"
+
+  actions {
+    ssl = "flexible"
+  }
+}
