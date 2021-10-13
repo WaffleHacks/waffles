@@ -31,10 +31,22 @@ resource "cloudflare_record" "record" {
   proxied = true
 }
 
+// Other DNS records, not pointed to our servers
+resource "cloudflare_record" "instatus_page" {
+  zone_id = data.cloudflare_zones.domain.zones[0].id
+
+  type = "CNAME"
+  name = "status.${var.domain}"
+  value = "cname.instatus.com"
+
+  ttl = 1
+  proxied = true
+}
+
 // Define page rules
 resource "cloudflare_page_rule" "mailgun_tracking" {
   zone_id = data.cloudflare_zones.domain.zones[0].id
-  target = "email.${var.domain}/*"
+  target  = "email.${var.domain}/*"
 
   actions {
     ssl = "flexible"
@@ -43,11 +55,11 @@ resource "cloudflare_page_rule" "mailgun_tracking" {
 
 resource "cloudflare_page_rule" "homepage_forwarding" {
   zone_id = data.cloudflare_zones.domain.zones[0].id
-  target = "www.${var.domain}/"
+  target  = "www.${var.domain}/"
 
   actions {
     forwarding_url {
-      url = "https://${var.domain}"
+      url         = "https://${var.domain}"
       status_code = 301
     }
   }
@@ -55,7 +67,7 @@ resource "cloudflare_page_rule" "homepage_forwarding" {
 
 resource "cloudflare_page_rule" "instatus_page" {
   zone_id = data.cloudflare_zones.domain.zones[0].id
-  target = "status.${var.domain}/*"
+  target  = "status.${var.domain}/*"
 
   actions {
     ssl = "flexible"
