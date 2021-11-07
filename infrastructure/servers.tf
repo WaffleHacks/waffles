@@ -13,9 +13,8 @@ resource "digitalocean_droplet" "primary" {
 
   ssh_keys = [data.digitalocean_ssh_key.root.id]
 
-  ipv6               = true
-  private_networking = true
-  vpc_uuid           = digitalocean_vpc.network.id
+  ipv6     = true
+  vpc_uuid = digitalocean_vpc.network.id
 }
 
 resource "digitalocean_firewall" "primary" {
