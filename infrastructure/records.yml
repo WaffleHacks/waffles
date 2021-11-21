@@ -8,6 +8,7 @@
 waffle-primary:
   # Infrastructure services
   - deploy.wafflehacks.tech
+  - traefik.wafflehacks.tech
   - vault.wafflehacks.tech
 
   # Deployed services
