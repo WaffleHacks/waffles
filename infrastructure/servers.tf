@@ -23,7 +23,7 @@ resource "digitalocean_firewall" "primary" {
   droplet_ids = [digitalocean_droplet.primary.id]
 
   dynamic "inbound_rule" {
-    for_each = ["22", "80", "443"]
+    for_each = ["80", "443"]
 
     content {
       protocol         = "tcp"
