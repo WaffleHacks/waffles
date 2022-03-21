@@ -40,7 +40,7 @@ resource "cloudflare_record" "instatus_page" {
   value = "cname.instatus.com"
 
   ttl     = 1
-  proxied = true
+  proxied = false
 }
 
 resource "cloudflare_record" "mailgun_tracking" {
@@ -73,14 +73,5 @@ resource "cloudflare_page_rule" "homepage_forwarding" {
       url         = "https://${var.domain}"
       status_code = 301
     }
-  }
-}
-
-resource "cloudflare_page_rule" "instatus_page" {
-  zone_id = data.cloudflare_zones.domain.zones[0].id
-  target  = "status.${var.domain}/*"
-
-  actions {
-    ssl = "flexible"
   }
 }
