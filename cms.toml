@@ -25,7 +25,7 @@
   auth_disable_default = "true"
   auth_providers = "auth0"
   auth_auth0_driver = "openid"
-  auth_auth0_issuer_url = "https://login.wafflehacks.tech/"
+  auth_auth0_issuer_url = "https://login.wafflehacks.org/"
   auth_auth0_allow_public_registration = "true"
   auth_auth0_require_verified_email = "true"
   auth_auth0_icon = "fingerprint"
