@@ -7,11 +7,11 @@
 
 waffle-primary:
   # Infrastructure services
-  - deploy.wafflehacks.tech
-  - traefik.wafflehacks.tech
-  - vault.wafflehacks.tech
+  - deploy.wafflehacks.org
+  - traefik.wafflehacks.org
+  - vault.wafflehacks.org
 
   # Deployed services
-  - apply.wafflehacks.tech
-  - bot.wafflehacks.tech
-  - cms.wafflehacks.tech
+  - apply.wafflehacks.org
+  - bot.wafflehacks.org
+  - cms.wafflehacks.org
