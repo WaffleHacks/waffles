@@ -18,7 +18,7 @@
 
   bot_disabled_extensions = ""
 
-  bot_hm_url = "https://apply.wafflehacks.tech"
+  bot_hm_url = "https://apply.wafflehacks.org"
 
 [secrets]
   discord_token = "load"
