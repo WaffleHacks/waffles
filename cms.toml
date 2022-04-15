@@ -7,7 +7,7 @@
   postgres = "DB_CONNECTION_STRING"
 
 [environment]
-  public_url = "https://cms.wafflehacks.tech"
+  public_url = "https://cms.wafflehacks.org"
 
   db_client = "pg"
 
@@ -15,8 +15,8 @@
   cache_store = "redis"
   cache_auto_purge = "true"
 
-  admin_email = "admin@wafflehacks.tech"
-  email_from = "cms@wafflehacks.tech"
+  admin_email = "admin@wafflehacks.org"
+  email_from = "cms@wafflehacks.org"
   email_transport = "mailgun"
 
   storage_locations = "s3"

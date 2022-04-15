@@ -7,7 +7,7 @@
   postgres = "DATABASE_URL"
 
 [environment]
-  hm_domain_name = "apply.wafflehacks.tech"
+  hm_domain_name = "apply.wafflehacks.org"
   hm_protocol = "https"
 
   lang = "en_US.UTF-8"
