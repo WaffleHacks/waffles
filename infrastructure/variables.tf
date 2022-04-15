@@ -31,7 +31,7 @@ variable "cloudflare_token" {
 variable "domain" {
   type        = string
   description = "The domain to modify DNS records on, must be active on Cloudflare"
-  default     = "wafflehacks.tech"
+  default     = "wafflehacks.org"
 }
 
 variable "project" {
