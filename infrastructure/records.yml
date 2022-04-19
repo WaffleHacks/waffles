@@ -12,6 +12,6 @@ waffle-primary:
   - vault.wafflehacks.org
 
   # Deployed services
-  - apply.wafflehacks.org
+  - api.apply.wafflehacks.org
   - bot.wafflehacks.org
   - cms.wafflehacks.org
