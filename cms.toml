@@ -1,0 +1,52 @@
+[docker]
+  image = "directus/directus"
+  tag = "9.9.1"
+
+[dependencies]
+  redis = "CACHE_REDIS"
+  postgres = "DB_CONNECTION_STRING"
+
+[environment]
+  public_url = "https://cms.wafflehacks.org"
+
+  db_client = "pg"
+
+  cache_enabled = "true"
+  cache_store = "redis"
+  cache_auto_purge = "true"
+
+  admin_email = "admin@wafflehacks.org"
+  email_from = "cms@wafflehacks.org"
+  email_transport = "ses"
+  email_ses_region = "us-west-2"
+
+  storage_locations = "s3"
+  storage_s3_driver = "s3"
+
+  auth_disable_default = "true"
+  auth_providers = "auth0"
+  auth_auth0_driver = "openid"
+  auth_auth0_issuer_url = "https://login.wafflehacks.org/"
+  auth_auth0_allow_public_registration = "true"
+  auth_auth0_require_verified_email = "true"
+  auth_auth0_icon = "fingerprint"
+
+  telemetry = "false"
+
+[secrets]
+  key = { type = "generate", format = "base64", length = 32 }
+  secret = { type = "generate", format = "base64", length = 32 }
+
+  admin_password = "load"
+
+  email_ses_credentials__access_key_id = { type = "aws", role = "cms", part = "access" }
+  email_ses_credentials__secret_access_key = { type = "aws", role = "cms", part = "secret" }  
+
+  storage_s3_key = { type = "aws", role = "cms", part = "access" }
+  storage_s3_secret = { type = "aws", role = "cms", part = "secret" }
+  storage_s3_bucket = "load"
+  storage_s3_region = "load"
+
+  auth_auth0_client_id = "load"
+  auth_auth0_client_secret = "load"
+  auth_auth0_default_role_id = "load"
