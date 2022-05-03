@@ -1,0 +1,28 @@
+[docker]
+  image = "wafflehacks/mailer"
+  tag = "latest"
+
+[web]
+  enabled = false
+
+[environment]
+  mailer_address = "0.0.0.0"
+
+  mailer_grpc_port = "9000"
+  mailer_http_port = "8500"
+
+  mailer_log_level = "info"
+  mailer_development = "no"
+
+  mailer_providers = "ses"
+
+  mailer_provider_ses_type = "ses"
+  mailer_provider_ses_workers = "3"
+  mailer_provider_ses_matches = "*@wafflehacks.org"
+
+[secrets]
+  mailer_sentry_dns = "load"
+
+  mailer_provider_ses_region = "load"
+  mailer_provider_ses_access_key = { type = "aws", role = "mailer", part = "access" }
+  mailer_provider_ses_secret_key = { type = "aws", role = "mailer", part = "secret" }
