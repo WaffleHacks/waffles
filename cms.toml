@@ -6,6 +6,9 @@
   redis = "CACHE_REDIS"
   postgres = "DB_CONNECTION_STRING"
 
+[web]
+  domain = "cms.wafflehacks.org"
+
 [environment]
   public_url = "https://cms.wafflehacks.org"
 

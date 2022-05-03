@@ -6,6 +6,9 @@
   redis = true
   postgres = { name = "DATABASE_URL", role = "wafflebot" }
 
+[web]
+  domain = "bot.wafflehacks.org"
+
 [environment]
   mode = "api"
   full_errors = "no"
