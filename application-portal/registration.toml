@@ -1,0 +1,24 @@
+[docker]
+  image = "wafflehacks/application-portal"
+  tag = "registration-latest"
+
+[dependencies]
+  redis = true
+  postgres = { name = "DATABASE_URL", role = "application-portal" }
+
+[web]
+  domain = "api.apply.wafflehacks.org"
+  path = "/registration"
+
+[environment]
+  apps = "registration"
+
+  issuer_url = "https://login.wafflehacks.org/"
+  jwks_url = "https://login.wafflehacks.org/.well-known/jwks.json"
+
+  registration_bucket = "wafflehacks-resumes"
+
+[secrets]
+  aws_default_region = "load"
+  aws_access_key_id = { type = "aws", role = "application-portal.registration", part = "access" }
+  aws_secret_access_key = { type = "aws", role = "application-portal.registration", part = "secret" }
