@@ -1,0 +1,10 @@
+[docker]
+  image = "wafflehacks/application-portal"
+  tag = "mjml-latest"
+
+[web]
+  enabled = false
+
+[environment]
+  host = "0.0.0.0"
+  port = "8000"
