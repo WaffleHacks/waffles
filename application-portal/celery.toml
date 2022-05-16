@@ -16,7 +16,7 @@
   jwks_url = "https://login.wafflehacks.org/.well-known/jwks.json"
 
   communication_mailer = "http://mailer.wafflemaker.internal:8500"
-  communication_mjml_api = "http://mjml.wafflemaker.internal:8000"
+  communication_mjml_api = "http://mjml.application-portal.wafflemaker.internal:8000"
 
   communication_sender = "apply@wafflehacks.org"
   communication_reply_to = "team@wafflehacks.org"
