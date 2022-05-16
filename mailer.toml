@@ -21,7 +21,7 @@
   mailer_provider_ses_matches = "*@wafflehacks.org"
 
 [secrets]
-  mailer_sentry_dns = "load"
+  mailer_sentry_dsn = "load"
 
   mailer_provider_ses_region = "load"
   mailer_provider_ses_access_key = { type = "aws", role = "mailer", part = "access" }
