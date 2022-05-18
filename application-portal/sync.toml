@@ -1,6 +1,6 @@
 [docker]
   image = "wafflehacks/application-portal"
-  tag = "sync-latest"
+  tag = "sync-main"
 
 [dependencies]
   redis = true

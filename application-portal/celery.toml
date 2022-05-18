@@ -1,6 +1,6 @@
 [docker]
   image = "wafflehacks/application-portal"
-  tag = "celery-latest"
+  tag = "celery-main"
 
 [dependencies]
   redis = true

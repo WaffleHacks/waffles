@@ -1,6 +1,6 @@
 [docker]
   image = "wafflehacks/application-portal"
-  tag = "mjml-latest"
+  tag = "mjml-main"
 
 [web]
   enabled = false

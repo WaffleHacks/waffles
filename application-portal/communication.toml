@@ -1,6 +1,6 @@
 [docker]
   image = "wafflehacks/application-portal"
-  tag = "communication-latest"
+  tag = "communication-main"
 
 [dependencies]
   redis = true
