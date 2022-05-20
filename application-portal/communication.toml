@@ -19,5 +19,5 @@
   communication_mailer = "http://mailer.wafflemaker.internal:8500"
   communication_mjml_api = "http://mjml.application-portal.wafflemaker.internal:8000"
 
-  communication_sender = "apply@wafflehacks.org"
+  communication_sender = "WaffleHacks Application Portal <apply@wafflehacks.org>"
   communication_reply_to = "team@wafflehacks.org"
