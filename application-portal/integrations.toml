@@ -1,0 +1,17 @@
+[docker]
+  image = "wafflehacks/application-portal"
+  tag = "integrations-main"
+
+[dependencies]
+  redis = true
+  postgres = { name = "DATABASE_URL", role = "application-portal" }
+
+[web]
+  domain = "api.apply.wafflehacks.org"
+  path = "/communication"
+
+[environment]
+  apps = "integrations"
+
+  issuer_url = "https://login.wafflehacks.org/"
+  jwks_url = "https://login.wafflehacks.org/.well-known/jwks.json"
