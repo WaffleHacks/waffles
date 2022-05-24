@@ -4,7 +4,7 @@
 
 [dependencies]
   redis = true
-  postgres = { name = "DATABASE_URL" }
+  postgres = { name = "DATABASE_URL", role = "discord-linking" }
 
 [web]
   domain = "discord.wafflehacks.org"
