@@ -16,6 +16,10 @@
 
   application_portal_url = "http://integrations.application-portal.wafflemaker.internal:8000"
 
+  otel_enable = "yes"
+  otel_service_name = "discord-linking"
+  otel_exporter_otlp_endpoint = "https://api.honeycomb.io"
+
 [secrets]
   secret_key = { type = "generate", format = "base64", length = 64 }
 
@@ -27,3 +31,5 @@
 
   aws_access_key = { type = "aws", role = "discord-linking", part = "access" }
   aws_secret_access_key = { type = "aws", role = "discord-linking", part = "secret" }
+
+  otel_exporter_otlp_headers = "load"
