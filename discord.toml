@@ -1,0 +1,29 @@
+[docker]
+  image = "wafflehacks/discord-linking"
+  tag = "main"
+
+[dependencies]
+  redis = true
+  postgres = { name = "DATABASE_URL" }
+
+[web]
+  domain = "discord.wafflehacks.org"
+
+[environment]
+  debug = "false"
+
+  auth0_domain = "login.wafflehacks.org"
+
+  application_portal_url = "http://integrations.application-portal.wafflemaker.internal:8000"
+
+[secrets]
+  secret_key = { type = "generate", format = "base64", length = 64 }
+
+  auth0_client_id = "load"
+  auth0_client_secret = "load"
+
+  discord_client_id = "load"
+  discord_client_secret = "load"
+
+  aws_access_key = { type = "aws", role = "discord-linking", part = "access" }
+  aws_secret_access_key = { type = "aws", role = "discord-linking", part = "secret" }
