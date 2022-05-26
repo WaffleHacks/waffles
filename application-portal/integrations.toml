@@ -15,3 +15,10 @@
 
   issuer_url = "https://login.wafflehacks.org/"
   jwks_url = "https://login.wafflehacks.org/.well-known/jwks.json"
+
+  otel_enable = "yes"
+  otel_service_name = "application-portal/integrations"
+  otel_exporter_otlp_endpoint = "https://api.honeycomb.io"
+
+[secrets]
+  otel_exporter_otlp_headers = "load"
