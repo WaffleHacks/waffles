@@ -20,3 +20,10 @@
 
   communication_sender = "apply@wafflehacks.org"
   communication_reply_to = "team@wafflehacks.org"
+
+  otel_enable = "yes"
+  otel_service_name = "application-portal/celery"
+  otel_exporter_otlp_endpoint = "https://api.honeycomb.io"
+
+[secrets]
+  otel_exporter_otlp_headers = "load"
