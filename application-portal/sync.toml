@@ -12,9 +12,15 @@
 [environment]
   apps = "sync"
 
+  otel_enable = "yes"
+  otel_service_name = "application-portal/sync"
+  otel_exporter_otlp_endpoint = "https://api.honeycomb.io"
+
 [secrets]
   sync_queue = "load"
 
   aws_default_region = "load"
   aws_access_key_id = { type = "aws", role = "application-portal.sync", part = "access" }
   aws_secret_access_key = { type = "aws", role = "application-portal.sync", part = "secret" }
+
+  otel_exporter_otlp_headers = "load"

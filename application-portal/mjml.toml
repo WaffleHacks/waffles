@@ -8,3 +8,10 @@
 [environment]
   host = "0.0.0.0"
   port = "8000"
+
+  otel_enable = "yes"
+  otel_service_name = "application-portal/mjml"
+  otel_exporter_otlp_endpoint = "api.honeycomb.io:443"
+
+[secrets]
+  otel_exporter_otlp_headers = "load"
