@@ -20,7 +20,7 @@
   mailer_provider_ses_workers = "3"
   mailer_provider_ses_matches = "*@wafflehacks.org"
 
-  otel_enable = "yes"
+  mailer_enable_tracing = "yes"
   otel_service_name = "mailer"
   otel_exporter_otlp_endpoint = "https://api.honeycomb.io:443"
 
