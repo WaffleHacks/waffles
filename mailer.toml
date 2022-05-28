@@ -20,9 +20,15 @@
   mailer_provider_ses_workers = "3"
   mailer_provider_ses_matches = "*@wafflehacks.org"
 
+  otel_enable = "yes"
+  otel_service_name = "mailer"
+  otel_exporter_otlp_endpoint = "https://api.honeycomb.io:443"
+
 [secrets]
   mailer_sentry_dsn = "load"
 
   mailer_provider_ses_region = "load"
   mailer_provider_ses_access_key = { type = "aws", role = "mailer", part = "access" }
   mailer_provider_ses_secret_key = { type = "aws", role = "mailer", part = "secret" }
+
+  otel_exporter_otlp_headers = "load"
