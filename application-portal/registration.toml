@@ -28,3 +28,6 @@
   aws_secret_access_key = { type = "aws", role = "application-portal.registration", part = "secret" }
 
   otel_exporter_otlp_headers = "load"
+
+  registration_algolia_app_id = "load"
+  registration_algolia_api_key = "load"
