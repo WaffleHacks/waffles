@@ -1,0 +1,24 @@
+[docker]
+  image = "wafflehacks/application-portal"
+  tag = "workshops-main"
+
+[dependencies]
+  redis = true
+  postgres = { name = "DATABASE_URL", role = "application-portal" }
+
+[web]
+  domain = "api.apply.wafflehacks.org"
+  path = "/workshops"
+
+[environment]
+  apps = "workshops"
+
+  issuer_url = "https://login.wafflehacks.org/"
+  jwks_url = "https://login.wafflehacks.org/.well-known/jwks.json"
+
+  otel_enable = "yes"
+  otel_service_name = "application-portal/workshops"
+  otel_exporter_otlp_endpoint = "https://api.honeycomb.io"
+
+[secrets]
+  otel_exporter_otlp_headers = "load"
