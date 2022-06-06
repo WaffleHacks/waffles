@@ -12,6 +12,8 @@
 [environment]
   apps = "tasks"
 
+  nats_url = "nats://172.18.1.2:4222"
+
   tasks_mailer = "http://mailer.wafflemaker.internal:8500"
 
   tasks_sender = "apply@wafflehacks.org"

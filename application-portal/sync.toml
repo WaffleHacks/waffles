@@ -12,6 +12,8 @@
 [environment]
   apps = "sync"
 
+  nats_url = "nats://172.18.1.2:4222"
+
   otel_enable = "yes"
   otel_service_name = "application-portal/sync"
   otel_exporter_otlp_endpoint = "https://api.honeycomb.io"

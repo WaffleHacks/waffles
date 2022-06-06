@@ -13,6 +13,8 @@
 [environment]
   apps = "workshops"
 
+  nats_url = "nats://172.18.1.2:4222"
+
   issuer_url = "https://login.wafflehacks.org/"
   jwks_url = "https://login.wafflehacks.org/.well-known/jwks.json"
 
