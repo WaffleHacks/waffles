@@ -1,0 +1,26 @@
+[docker]
+  image = "wafflehacks/application-portal"
+  tag = "tasks-main"
+
+[dependencies]
+  redis = true
+  postgres = { name = "DATABASE_URL", role = "application-portal" }
+
+[web]
+  enabled = false
+
+[environment]
+  apps = "tasks"
+
+  tasks_mailer = "http://mailer.wafflemaker.internal:8500"
+
+  tasks_sender = "apply@wafflehacks.org"
+  tasks_reply_to = "team@wafflehacks.org"
+
+  otel_enable = "yes"
+  otel_service_name = "application-portal/tasks"
+  otel_exporter_otlp_endpoint = "https://api.honeycomb.io"
+
+[secrets]
+  otel_exporter_otlp_headers = "load"
+
