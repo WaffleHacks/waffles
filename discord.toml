@@ -16,6 +16,8 @@
 
   application_portal_url = "http://integrations.application-portal.wafflemaker.internal:8000"
 
+  nats_url = "nats://172.18.1.2:4222"
+
   otel_enable = "yes"
   otel_service_name = "discord-linking"
   otel_exporter_otlp_endpoint = "https://api.honeycomb.io"
