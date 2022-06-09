@@ -31,7 +31,7 @@
   discord_client_id = "load"
   discord_client_secret = "load"
 
-  aws_access_key = { type = "aws", role = "discord-linking", part = "access" }
+  aws_access_key_id = { type = "aws", role = "discord-linking", part = "access" }
   aws_secret_access_key = { type = "aws", role = "discord-linking", part = "secret" }
 
   otel_exporter_otlp_headers = "load"
