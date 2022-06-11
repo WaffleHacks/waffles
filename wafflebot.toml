@@ -1,6 +1,6 @@
 [docker]
   image = "wafflehacks/wafflebot"
-  tag = "latest"
+  tag = "main"
 
 [web]
   enabled = false
