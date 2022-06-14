@@ -5,6 +5,9 @@
 [web]
   enabled = false
 
+[dependencies]
+  postgres = { name = "DATABASE_URL", role = "wafflebot" }
+
 [environment]
   calendar_id = "kso6qzsg1puo4x3kjq"
   calendar_start_date = "2022-06-17"
@@ -13,9 +16,11 @@
   bot_id = "816428817740333086"
   guild_id = "962465669910257735"
 
+  verification_help_channel_id = "962466558142218361"
+
   unverified_role = "962474193721655306"
 
-  discord_linking_api = "http://discord.wafflemaker.internal:8000"
+  integrations_api_url = "http://discord.wafflemaker.internal:8000"
 
   nats_url = "nats://172.18.1.2:4222"
 
