@@ -21,7 +21,7 @@
 
   unverified_role = "962474193721655306"
 
-  integrations_api_url = "http://discord.wafflemaker.internal:8000"
+  integrations_api_url = "http://integrations.application-portal.wafflemaker.internal:8000"
 
   nats_url = "nats://172.18.1.2:4222"
 
