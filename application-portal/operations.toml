@@ -1,0 +1,26 @@
+[docker]
+  image = "wafflehacks/application-portal"
+  tag = "operations-main"
+
+[dependencies]
+  redis = true
+  postgres = { name = "DATABASE_URL", role = "application-portal" }
+
+[web]
+  domain = "api.apply.wafflehacks.org"
+  path = "/operations"
+
+[environment]
+  apps = "operations"
+
+  nats_url = "nats://172.18.1.2:4222"
+
+  issuer_url = "https://login.wafflehacks.org/"
+  jwks_url = "https://login.wafflehacks.org/.well-known/jwks.json"
+
+  otel_enable = "yes"
+  otel_service_name = "application-portal/operations"
+  otel_exporter_otlp_endpoint = "https://api.honeycomb.io"
+
+[secrets]
+  otel_exporter_otlp_headers = "load"
